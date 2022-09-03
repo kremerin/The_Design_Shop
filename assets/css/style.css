@@ -1,0 +1,264 @@
+/* karla-regular - latin */
+@font-face {
+    font-family: 'Karla';
+    font-style: normal;
+    font-weight: 400;
+    src: local(''),
+         url('../fonts/karla-v23-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/karla-v23-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  /* karla-500 - latin */
+  @font-face {
+    font-family: 'Karla';
+    font-style: normal;
+    font-weight: 500;
+    src: local(''),
+         url('../fonts/karla-v23-latin-500.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/karla-v23-latin-500.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  /* karla-800 - latin */
+  @font-face {
+    font-family: 'Karla';
+    font-style: normal;
+    font-weight: 800;
+    src: local(''),
+         url('../fonts/karla-v23-latin-800.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/karla-v23-latin-800.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Karla';
+    color: #323A45;
+    font-weight: 500;
+    font-size: 1.2rem;
+    width: 1440px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 4rem 0 2rem 0;
+}
+
+h2 {
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+h3 {
+    font-weight: 500;
+    margin-bottom: 2rem;
+}
+
+a {
+    color: #323A45;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+a:hover {
+    color: #848484;
+}
+
+img {
+    max-width: 100%;
+    object-fit: cover;
+}
+
+section {
+    margin: 2rem 0;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    margin: 0 5rem 0 0;
+}
+
+.logo a {
+    text-transform: uppercase;
+}
+
+#desktopNav {
+    flex-shrink: 0;
+    flex-grow: 1;
+}
+
+#desktopNav ul {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#desktopNav ul li {
+    list-style: none;
+}
+
+#desktopNav ul li a {
+    padding: 0 1rem;
+}
+
+#mobileNav {
+    display: none;
+}
+
+.pic img {
+    transition: 0.5s;
+}
+.pic img:hover {
+    opacity: 0.4;
+}
+
+.description {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 0;
+}
+
+.description p {
+    color: #848484;
+}
+
+.description span {
+    align-self: flex-end;
+}
+
+.productView {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.product {
+    flex: 1 1 31%;
+    margin: 0 1%;
+}
+
+.product:first-of-type {
+    margin-left: 0;
+}
+
+.product:last-of-type {
+    margin-right: 0;
+}
+
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 4rem;
+}
+
+.spalte {
+    flex: 1 1 23%;
+    margin: 0 1%;
+}
+
+.spalte:nth-of-type(even) {
+    padding-left: 2rem;
+}
+
+.spalte:first-of-type {
+    margin-left: 0;
+}
+
+.spalte:last-of-type {
+    margin-right: 0;
+}
+
+footer ul li {
+    list-style: none;
+}
+
+footer div {
+    margin: 4rem 0 2rem;
+    color: #848484;
+}
+
+footer div span {
+    padding: 0 0.5rem;
+}
+
+/* Media Queries */
+
+/* Extra small devices (phones, 600px and down) */
+@media 
+(min-device-width : 10px) and (max-device-width : 740px),
+(min-width : 10px) and (max-width : 740px)
+{
+    body {
+       max-width: 90%;
+    }
+    .productView img{
+        max-height: 500px;
+        width: 100%;
+    }
+    .product, .spalte {
+        flex: 1 1 100%;
+        margin: 0;
+    }
+    footer .spalte:nth-of-type(2n) {
+        padding: 0;
+    }
+    #desktopNav {
+        display: none;
+    }
+    #mobileNav {
+        display: block;
+    }
+    label.hamburg { 
+        display: block;
+        width: 30px; 
+        height: 30px; 
+        position: relative; 
+        margin-left: auto; 
+        margin-right: auto;
+        border-radius: 4px; 
+     }
+     
+     input#hamburg {display:none}
+     
+     .line { 
+        position: absolute; 
+        left:10px;
+        height: 2px;
+        width: 30px; 
+        background: #323A45; 
+        border-radius: 2px;
+        display: block; 
+        transition: 0.5s; 
+        transform-origin: center; 
+     }
+     
+     .line:nth-child(1) { top: 12px; }
+     .line:nth-child(2) { top: 24px; }
+     .line:nth-child(3) { top: 36px; }
+     
+     #hamburg:checked + .hamburg .line:nth-child(1){
+        transform: translateY(12px) rotate(-45deg);
+     }
+     
+     #hamburg:checked + .hamburg .line:nth-child(2){
+        opacity:0;
+     }
+     
+     #hamburg:checked + .hamburg .line:nth-child(3){
+        transform: translateY(-12px) rotate(45deg);
+     }
+    nav.topmenu { 
+        height: auto; 
+        max-height:0; 
+        overflow: hidden; 
+        transition: all 0.5s;
+    }
+    #hamburg:checked + .hamburg  + nav.topmenu { 
+        max-height: 600px; 
+    }
+
+}
